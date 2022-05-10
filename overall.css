@@ -98,13 +98,16 @@ header{
 }
 
 .yohaku{
-    background-image:url(background_C.png);
     opacity:0.8;
     height:600px;
     width:100%;
     display:flex;
     align-items:center;
+    background-image: url(background_C.png);
     justify-content:center;
+	/*background-size: 100% auto, 100% auto, 100% auto;
+	background-repeat: no-repeat, no-repeat, no-repeat;
+    animation:the_slide 2s linear 9s infinite normal forwards running;*/
     
 }
 
@@ -167,7 +170,7 @@ span{
 }
 
 .space2{
-    height:50px;
+    height:20px;
 }
 
 .s_content{
@@ -227,17 +230,31 @@ span{
     margin:0 auto;
 }
 
-.name{
+.name1{
     font-size:18px;
     color:darkorange;
+    text-align: left;
+}
+
+.name2{
+    font-size:18px;
+    color:darkorange;
+    text-align: right;
 }
 
 .bb{
     margin-top:10px;
 }
 
-.self-intro{
+.self-intro1{
     text-align: left;
+    margin:0 10px;
+    font-size:20px;
+    font-weight:500;
+}
+
+.self-intro2{
+    text-align: right;
     margin:0 10px;
     font-size:20px;
     font-weight:500;
@@ -246,3 +263,61 @@ span{
 .forspace{
     height:50px;
 }
+
+.mid_sec{
+    height:700px;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    background-color:rgb(217, 247, 255);
+    clip-path:polygon(0 0, 100% 15%, 100% 85%, 0 100%);
+}
+
+.photoes{
+    position:relative;
+    width:60%;
+}
+
+.photo{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    opacity:0;
+    animation:cal-sel 15s infinite;
+}
+
+.no1{
+    background-image:url(background_C.png);
+    animation-delay: 0;
+}
+
+.no2{
+    background-image:url(github.png);
+    animation-delay:5s;
+}
+
+.no3{
+    background-image:url(unity.png);
+    animation-delay:10s;
+}
+
+.desc{
+    margin:auto 0;
+    width:40%;
+    text-align: center;
+}
+
+.desc p{
+    font-size:20px;
+    margin:30px 0;
+}
+
+@keyframes cal-sel{
+    0% { opacity: 0; }
+    3% { opacity: 1; }
+   30% { opacity: 1; }
+   33% { opacity: 0; }
+  100% { opacity: 0; }
+ }
